@@ -12,23 +12,23 @@ const cartList = useSelector(state => state.cartState.cartList)
 
 
   return (
-    <header className="bg-white border-b-2 border-gray-200" >
+    <header className="bg-white border-b-2 border-gray-200 sticky top-0" >
       
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between  p-4">
             <div>
               <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                   <img src={process.env.PUBLIC_URL + '/assets/favicon.ico.jpg'} className="h-20" alt="bag Logo" />
-                  <span className=" self-center text-3xl font-semibold whitespace-nowrap">Redux Cart</span>
+                  <span className=" self-center text-4xl font-semibold whitespace-nowrap">Redux Cart</span>
               </Link>
             </div>
           
         
-            <nav className="max-w-screen-xl flex flex-wrap items-center  mx-auto p-4">  
-                <NavLink to="/"  aria-current="page" className='text-2xl font-medium rounded-md hover:bg-gray-300 p-2'>Home</NavLink>     
-                <NavLink to="/cart" className='text-2xl font-medium rounded-md hover:bg-gray-300 p-2' >Cart</NavLink>
+            <nav className="max-w-screen-xl flex flex-wrap items-center  p-4">  
+                <NavLink to="/"  aria-current="page" className='text-3xl font-medium rounded-md hover:bg-gray-300 p-2'>Home</NavLink>     
+                <NavLink to="/cart" className='text-3xl font-medium rounded-md hover:bg-gray-300 p-2' >Cart</NavLink>
             </nav>
             <Link to="/cart">
-            <span className='text-2xl'>Cart:{cartList.length}</span>
+            <span className='text-3xl font-medium'>Cart:{cartList.length}</span>
             </Link> 
         </div>
        
