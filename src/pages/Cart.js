@@ -21,8 +21,8 @@ export default function Cart() {
   const total=useSelector(state => state.cartState.total)
   return (
     <main>
-      <section className='flex flex-wrap'>
-        <h1 className='text-xl font-medium'>Cart Items:{cartList.length}/${total}</h1>
+      <h1 className='text-xl font-medium'>Cart Items:{cartList.length}/${total}</h1>
+      <section className='flex flex-row flex-wrap'>
       {cartList.map((product)=>(
         <CartCard key={product.id} product={product} />
       ))}
